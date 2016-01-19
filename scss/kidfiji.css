@@ -281,10 +281,33 @@ hr {
 .u-pull-left {
   float: left; }
 
+/* line 22, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+.u-cf:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+/* line 30, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+.u-cf {
+  display: inline-block; }
+
+/* start commented backslash hack \*/
+/* line 32, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+* html .u-cf {
+  height: 1%; }
+
+/* line 33, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+.u-cf {
+  display: block; }
+
+/* close commented backslash hack */
 /* line 4, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 300; }
 
 /* line 10, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_typography.scss */
@@ -794,43 +817,108 @@ ol,
 form {
   margin-bottom: 2.5rem; }
 
-/* line 5, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0; }
+/* line 8, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+.portfolio-item {
+  width: 33.333%;
+  float: left;
+  padding: 0 15px 30px 15px;
+  box-sizing: border-box; }
+  @media (max-width: 1000px) {
+    /* line 8, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    .portfolio-item {
+      width: 50%; } }
+  @media (max-width: 550px) {
+    /* line 8, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    .portfolio-item {
+      padding: 0 0 30px 0;
+      width: 100%; } }
 
-/* line 11, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
-body {
-  border: 20px solid #e1e1e1; }
+/* line 22, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+.portfolio-sizer {
+  width: 33.333%; }
+  @media (max-width: 1000px) {
+    /* line 22, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    .portfolio-sizer {
+      width: 50%; } }
+  @media (max-width: 550px) {
+    /* line 22, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    .portfolio-sizer {
+      width: 100%; } }
 
-/* line 19, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+/* line 32, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+.portfolio-filters {
+  text-align: center; }
+  /* line 35, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .portfolio-filters li {
+    list-style: none;
+    display: inline;
+    margin-bottom: 0; }
+  /* line 40, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .portfolio-filters a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 5px 8px 5px 11px;
+    margin: 0 4px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s; }
+    /* line 50, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    .portfolio-filters a:hover:not(.active) {
+      background-color: #333;
+      color: #fff;
+      transition: background-color 0.3s, color 0.3s; }
+  /* line 56, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .portfolio-filters .active {
+    background-color: #1abc9c;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s; }
+
+/* line 74, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif; }
+
+/* line 79, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
 .header {
   color: #333;
   clear: both;
   margin: 40px 0; }
-  /* line 23, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  /* line 83, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
   .header .logo {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Montserrat", sans-serif;
     float: left;
-    line-height: 55px;
-    padding: 0 25px;
+    line-height: 60px;
+    margin-left: 25px;
     font-size: 50px;
     text-transform: uppercase; }
+    @media (max-width: 850px) {
+      /* line 83, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+      .header .logo {
+        margin: 0;
+        float: none;
+        text-align: center; } }
+  @media (max-width: 850px) {
+    /* line 79, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    .header {
+      margin-bottom: 10px; } }
 
-/* line 34, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+/* line 102, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
 .navbar ul {
   float: right;
   list-style: none;
+  text-align: center;
   margin: 0;
   padding: 0;
   overflow: hidden; }
-  /* line 40, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  /* line 109, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
   .navbar ul li {
     float: left;
+    display: inline-block;
     margin: 0;
     padding: 5px 15px; }
-    /* line 44, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    /* line 114, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
     .navbar ul li a {
       text-decoration: none;
       text-transform: uppercase;
@@ -839,18 +927,51 @@ body {
       margin-top: 14px;
       display: block; }
 
-/* line 56, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
-.hero {
-  text-align: center;
-  margin-bottom: 20px; }
+@media (max-width: 850px) {
+  /* line 101, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .navbar {
+    text-align: center; }
+    /* line 126, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+    .navbar ul {
+      float: none;
+      display: inline-block;
+      margin: 0 auto; }
+      /* line 130, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+      .navbar ul li {
+        padding: 5px 10px; } }
 
-/* line 61, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+/* line 137, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+hr {
+  width: 64px;
+  margin: 35px auto; }
+
+/* line 142, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+.headline {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  text-align: center;
+  letter-spacing: 2px; }
+  /* line 148, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .headline-sub {
+    font-size: 1.15em;
+    text-align: center; }
+
+/* line 155, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
 .card {
   border: 1px solid #e1e1e1;
-  padding: 15px 20px; }
-  /* line 65, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
-  .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
-    text-transform: uppercase;
-    font-family: "Roboto Condensed", sans-serif; }
+  box-sizing: border-box; }
+  /* line 160, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .card-header img {
+    max-width: 100%;
+    display: block; }
+  /* line 165, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .card-info {
+    padding: 8px 10px; }
+  /* line 168, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/kidfiji.scss */
+  .card-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25em;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=kidfiji.css.map */

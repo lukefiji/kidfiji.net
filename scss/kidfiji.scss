@@ -1,19 +1,79 @@
 @import "skeleton";
 
-$roboto-condensed: "Roboto Condensed", sans-serif;
-
-html, body {
-   height: 100%;
-   margin: 0;
-   padding: 0;
+//
+// Stuff for JS
+/////////////////
+.portfolio {
+  
+  &-item {
+    width: 33.333%;
+    float: left;
+    padding: 0 15px 30px 15px;
+    box-sizing: border-box;
+    @media (max-width: 1000px) {
+      width: 50%; 
+    }
+    @media (max-width: 550px) {
+      padding: 0 0 30px 0;
+      width: 100%; 
+    }
+  }
+  
+  &-sizer {
+    width: 33.333%;
+    @media (max-width: 1000px) {
+      width: 50%; 
+    }
+    @media (max-width: 550px) {
+      width: 100%; 
+    }
+  }
+  
+  &-filters {
+    text-align: center;
+//    font-family: $font-family-secondary;
+    li {
+      list-style: none;
+      display: inline;
+      margin-bottom: 0;
+    }
+    a {
+      color: $font-color;
+      text-decoration: none;
+      font-size: 1em;
+      text-transform: uppercase;
+      padding: 5px 8px 5px 11px;
+      margin: 0 4px;
+      border-radius: 4px;
+      letter-spacing: 2px;
+      transition: background-color .3s, color .3s;
+      &:hover:not(.active) {
+        background-color: #333;
+        color: #fff;
+        transition: background-color .3s, color .3s;
+      }
+    }
+    .active {
+      background-color: $primary-color;
+      color: #fff;
+      transition: background-color .3s, color .3s;
+    }
+  }
 }
 
-body {
-  border: 20px solid $light-grey;
-}
+//html, body {
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+//}
+//
+//body {
+//  border: 20px solid $light-grey;
+//}
 
-a {
-//  text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: $font-family-secondary;
 }
 
 .header {
@@ -21,12 +81,20 @@ a {
   clear: both;
   margin: 40px 0;
   .logo {
-    font-family: $roboto-condensed;
+    font-family: $font-family-secondary;
     float: left;
-    line-height: 55px;
-    padding: 0 25px;
+    line-height: 60px;
+    margin-left: 25px;
     font-size: 50px;
     text-transform: uppercase;
+    @media (max-width: 850px) {
+      margin: 0;
+      float: none;
+      text-align: center;
+    }
+  }
+  @media (max-width: 850px) {
+    margin-bottom: 10px;
   }
 }
 
@@ -34,11 +102,13 @@ a {
   ul {
     float: right;
     list-style: none;
+    text-align: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
     li {
       float: left;
+      display: inline-block;
       margin: 0;
       padding: 5px 15px;
       a {
@@ -51,19 +121,53 @@ a {
       }
     }
   }
+  @media (max-width: 850px) {
+    text-align: center;
+    ul {
+      float: none;
+      display: inline-block;
+      margin: 0 auto;
+      li {
+        padding: 5px 10px;
+      }
+    }
+  }
 }
 
-.hero {
-  text-align: center;
-  margin-bottom: 20px;
+hr {
+  width: 64px;
+  margin: 35px auto;
 }
+
+.headline {
+  font-family: $font-family-secondary;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  text-align: center;
+  letter-spacing: 2px;
+  &-sub {
+    font-size: 1.15em;
+    text-align: center;
+  }
+}
+
 
 .card {
   border: 1px solid $light-grey;
-  padding: 15px 20px;
-//  box-shadow: 1px 1px 1px #cccccc;
-  h1, h2, h3, h4, h5, h6 {
+  box-sizing: border-box;
+//  box-shadow: 1px 1px 2px #cccccc;
+  &-header {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  &-info {
+    padding: 8px 10px;
+  }
+  &-title {
+    font-family: $font-family-secondary;
+    font-size: 1.25em;
     text-transform: uppercase;
-    font-family: $roboto-condensed;
   }
 }

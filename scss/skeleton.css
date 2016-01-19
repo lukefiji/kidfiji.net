@@ -281,10 +281,33 @@ hr {
 .u-pull-left {
   float: left; }
 
+/* line 22, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+.u-cf:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+/* line 30, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+.u-cf {
+  display: inline-block; }
+
+/* start commented backslash hack \*/
+/* line 32, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+* html .u-cf {
+  height: 1%; }
+
+/* line 33, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_utils.scss */
+.u-cf {
+  display: block; }
+
+/* close commented backslash hack */
 /* line 4, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 300; }
 
 /* line 10, C:/Users/Luke/Documents/GitHub/kidfiji.net/scss/base/_typography.scss */

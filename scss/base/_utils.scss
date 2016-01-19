@@ -18,3 +18,17 @@
 .u-pull-left {
   float: left;
 }
+
+.u-cf:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.u-cf { display: inline-block; }
+/* start commented backslash hack \*/
+* html .u-cf { height: 1%; }
+.u-cf { display: block; }
+/* close commented backslash hack */
